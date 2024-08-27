@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset Css */
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global css */
+body {
+  background-color: #f3f5fc;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+a,
+textarea,
+textarea::placeholder {
+  color: #0a3871;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Navbar */
+
+header {
+  padding: 0 50px;
+}
+header img {
+  margin-top: 30px;
+}
+
+/* Entrada e saída */
+
+main {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.campo {
+  margin: 0 7px;
+}
+
+#entrada {
+  width: 65vw;
+}
+#resultado {
+  width: 20vw;
+  margin-top: -12vh;
+}
+
+textarea {
+  background-color: transparent;
+  resize: none;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border: 1px solid #333;
+}
+
+#text-entrada {
+  height: 57vh;
+}
+#text-resultado {
+  height: 65vh;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button {
+  padding: 3vh 6vw;
+  margin: 6px;
+  border: none;
+  border-radius: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+button#btn-criptografar,
+button#btn-copiar {
+  background-color: #0a3871;
+  color: #eee;
+}
+
+button#btn-descriptografar,
+button#btn-limpar {
+  background-color: #e8edfc;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+}
+
+/* Entrada */
+
+#text-entrada {
+  border-radius: 15px;
+}
+
+/* Resultado (saída) */
+
+#text-resultado {
+  background: url(../img/saida-background.svg);
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100%;
+  background-position: center center;
+  border: 1px solid #333;
+  border-radius: 32px;
+  transition: all 250ms ease-in-out;
+}
+
+/* Modal do botão copiar */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(232, 237, 252);
+  text-align: center;
+  animation: reveal 1500ms ease-in-out;
+}
+
+@keyframes reveal {
+  50% {
+    opacity: 1;
+    background-color: rgba(232, 237, 252, 0.75);
+  }
+
+  100% {
+    background-color: transparent;
+    opacity: 0;
+  }
+}
+
+.show-modal {
+  display: block;
+}
+
+.modal p {
+  display: inline-block;
+  margin-top: 40vh;
+  background-color: #0a3871;
+  color: #e8edfc;
+  margin: inherit auto;
+  padding: 3vh 5vw;
+}
+
+.remove-background {
+  background-size: 0% !important;
+}
+
+/* Erros */
+
+ul#erros {
+  list-style: none;
+  margin-top: 15px;
+}
+
+ul#erros li {
+  color: #495057;
+  margin-bottom: 7px;
+  transition: all 50ms ease-in-out;
+}
+
+#erros li::before {
+  content: url(../img/aviso.png);
+  filter: invert(1);
+  margin-right: 0.3em;
+  /*
+    content: '!';
+    font-size: .85em;
+    margin-right: .45em;
+    background-color: #495057;
+    color: #eee;
+    padding: .2em .75em;
+    border-radius: 100%;
+    */
+}
+
+.bloqueado {
+  cursor: not-allowed !important;
+}
+
+/* Footer */
+footer {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.social {
+  margin-top: 10px;
+}
+
+.social img {
+  height: 32px;
+}
